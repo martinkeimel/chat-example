@@ -6,4 +6,4 @@ of the Socket.IO website.
 
 Please refer to it to learn how to run this application.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/mravinale/chat-example)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
