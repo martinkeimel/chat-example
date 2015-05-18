@@ -7,8 +7,14 @@ app.get('/', function(req, res){
 });
 
 io.on('connection', function(socket){
+  socket.broadcast.emit('chat message', socket.handshake.query.nick + ' has connected');  
+
   socket.on('chat message', function(msg){
-    io.emit('chat message', msg.nick + " says " + msg.message);
+		socket.broadcast.emit('chat message', msg.nick + " says " + msg.message);
+  });
+  
+  socket.on('disconnect', function() {
+	socket.broadcast.emit('chat message', socket.handshake.query.nick + ' has disconnected');
   });
 });
 
